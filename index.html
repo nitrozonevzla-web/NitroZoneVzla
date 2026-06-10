@@ -1846,6 +1846,23 @@ document.addEventListener('keydown', e => {
   }
 });
 document.addEventListener('keyup', e => _keysHeld.delete(e.key.toLowerCase()));
+
+/* Mobile secret: tap logo 5 times fast */
+let _logoTaps = 0, _logoTimer = null;
+document.addEventListener('DOMContentLoaded', () => {
+  const logo = document.querySelector('.nav-logo');
+  if (!logo) return;
+  logo.addEventListener('click', () => {
+    _logoTaps++;
+    clearTimeout(_logoTimer);
+    if (_logoTaps >= 5) {
+      _logoTaps = 0;
+      const p = document.getElementById('adminPanel');
+      p.style.display = p.style.display === 'none' ? 'block' : 'none';
+    }
+    _logoTimer = setTimeout(() => { _logoTaps = 0; }, 2000);
+  });
+});
 </script>
 
 </body>
