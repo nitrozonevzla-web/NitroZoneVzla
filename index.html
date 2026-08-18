@@ -2067,4 +2067,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const p = document.getElementById('adminPanel');
       p.style.display = p.style.display === 'none' ? 'block' : 'none';
     }
-    _logoTimer = setTimeout((
+    _logoTimer = setTimeout(() => { _logoTaps = 0; }, 2000);
+  });
+});
+</script>
+
+</body>
+</html>
