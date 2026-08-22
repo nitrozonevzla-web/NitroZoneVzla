@@ -2119,6 +2119,21 @@ document.addEventListener('DOMContentLoaded', () => {
     _logoTimer = setTimeout(() => { _logoTaps = 0; }, 2000);
   });
 });
+
+/* QTY SELECTOR */
+function selectQty(el, name1, price1, name2, price2) {
+  el.closest('.qty-selector').querySelectorAll('.qty-opt').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  var isPar = el.dataset.qty === 'par';
+  var name  = isPar ? name2  : name1;
+  var price = isPar ? price2 : price1;
+  var body  = el.closest('.product-body');
+  var dec   = price.toFixed(2).split('.');
+  body.querySelector('.product-price').innerHTML = '$' + dec[0] + '<sup>.' + dec[1] + '</sup>';
+  var btn = body.querySelector('.btn-add-cart');
+  if (btn) btn.setAttribute('onclick', "addToCart('" + name + "'," + price + ",this)");
+}
+
 </script>
 
 </body>
