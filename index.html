@@ -45,6 +45,23 @@
 .admin-btn:hover { background:var(--red-dark); }
 .admin-status { font-size:.75rem; color:var(--muted); margin-top:.5rem; }
 
+
+/* ============================================
+   QTY SELECTOR (portaplacas)
+   ============================================ */
+.qty-selector {
+  display:flex; gap:.4rem; margin-bottom:.75rem;
+}
+.qty-opt {
+  flex:1; padding:.45rem .3rem; text-align:center;
+  border:1px solid var(--border); border-radius:3px;
+  cursor:pointer; font-family:'Barlow Condensed'; font-weight:700;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--muted); transition:all .2s; user-select:none;
+  background:transparent;
+}
+.qty-opt.selected { border-color:var(--red); color:var(--white); background:rgba(212,43,43,.15); }
+
 /* ============================================
    TOKENS
    ============================================ */
@@ -1032,6 +1049,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Soporte Ajustable Carbono — Negro</div>
           <p class="product-desc">Soporte de placa ajustable fibra de carbono negro. Universal. Tornillería incluida.</p>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Soporte Carbono Negro x1',11.99,'Soporte Carbono Negro PAR',21.99)">1 ud — $11.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Soporte Carbono Negro x1',11.99,'Soporte Carbono Negro PAR',21.99)">Par — $21.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$12<sup>.00</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-1">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1047,6 +1068,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Soporte Ajustable Carbono — Plateado</div>
           <p class="product-desc">Soporte de placa ajustable fibra de carbono plateado. Elegante y resistente. Tornillería incluida.</p>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Soporte Carbono Plateado x1',11.99,'Soporte Carbono Plateado PAR',21.99)">1 ud — $11.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Soporte Carbono Plateado x1',11.99,'Soporte Carbono Plateado PAR',21.99)">Par — $21.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$12<sup>.00</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-2">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1062,7 +1087,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Portaplaca Marco Chevrolet / SS</div>
           <p class="product-desc">Marco portaplaca Chevrolet SS. Negro mate con logos en colores oficiales.</p>
-          <div style="font-size:.72rem;color:#E8A020;font-weight:700;margin-bottom:.5rem;">&#x1F4E6; Par: $11.99 USD</div>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Portaplaca Chevrolet SS x1',7.99,'Portaplaca Chevrolet SS PAR',11.99)">1 ud — $7.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Portaplaca Chevrolet SS x1',7.99,'Portaplaca Chevrolet SS PAR',11.99)">Par — $11.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$7<sup>.99</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-3">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1078,7 +1106,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Portaplaca Chevrolet — Find New Roads</div>
           <p class="product-desc">Logo dorado Chevrolet. Texto Find New Roads. Acabado negro brillante premium.</p>
-          <div style="font-size:.72rem;color:#E8A020;font-weight:700;margin-bottom:.5rem;">&#x1F4E6; Par: $11.99 USD</div>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Portaplaca Chevrolet FNR x1',7.99,'Portaplaca Chevrolet FNR PAR',11.99)">1 ud — $7.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Portaplaca Chevrolet FNR x1',7.99,'Portaplaca Chevrolet FNR PAR',11.99)">Par — $11.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$7<sup>.99</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-4">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1094,7 +1125,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Portaplaca Sparco — Azul Racing</div>
           <p class="product-desc">Marco Sparco azul eléctrico con logo en blanco. Estilo sport llamativo.</p>
-          <div style="font-size:.72rem;color:#E8A020;font-weight:700;margin-bottom:.5rem;">&#x1F4E6; Par: $11.99 USD</div>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Portaplaca Sparco Azul x1',7.99,'Portaplaca Sparco Azul PAR',11.99)">1 ud — $7.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Portaplaca Sparco Azul x1',7.99,'Portaplaca Sparco Azul PAR',11.99)">Par — $11.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$7<sup>.99</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-5">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1110,7 +1144,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Portaplaca JDM — XT Racing</div>
           <p class="product-desc">Emblema JDM verde-amarillo. XT Racing en rojo. Estilo japonés puro.</p>
-          <div style="font-size:.72rem;color:#E8A020;font-weight:700;margin-bottom:.5rem;">&#x1F4E6; Par: $11.99 USD</div>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Portaplaca JDM XT Racing x1',7.99,'Portaplaca JDM XT Racing PAR',11.99)">1 ud — $7.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Portaplaca JDM XT Racing x1',7.99,'Portaplaca JDM XT Racing PAR',11.99)">Par — $11.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$7<sup>.99</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-6">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1126,7 +1163,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Portaplaca Skunk2 Racing</div>
           <p class="product-desc">Logo Skunk2 en negro. The Best Just Got Better. Acabado premium.</p>
-          <div style="font-size:.72rem;color:#E8A020;font-weight:700;margin-bottom:.5rem;">&#x1F4E6; Par: $11.99 USD</div>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Portaplaca Skunk2 x1',7.99,'Portaplaca Skunk2 PAR',11.99)">1 ud — $7.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Portaplaca Skunk2 x1',7.99,'Portaplaca Skunk2 PAR',11.99)">Par — $11.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$7<sup>.99</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-7">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1338,7 +1378,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Portaplaca Hyundai 3D Premium</div>
           <p class="product-desc">Marco 3D con logo Hyundai en rojo y texto en blanco. Acabado negro mate premium.</p>
-          <div style="font-size:.72rem;color:#E8A020;font-weight:700;margin-bottom:.5rem;">📦 Par: $11.99 USD</div>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Portaplaca Hyundai 3D x1',7.99,'Portaplaca Hyundai 3D PAR',11.99)">1 ud — $7.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Portaplaca Hyundai 3D x1',7.99,'Portaplaca Hyundai 3D PAR',11.99)">Par — $11.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$7<sup>.99</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-21">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1354,7 +1397,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Portaplaca Toyota Retro Tricolor</div>
           <p class="product-desc">Diseño retro Toyota con franjas amarillo, naranja y granate. Estilo JDM clásico.</p>
-          <div style="font-size:.72rem;color:#E8A020;font-weight:700;margin-bottom:.5rem;">📦 Par: $11.99 USD</div>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Portaplaca Toyota Retro x1',7.99,'Portaplaca Toyota Retro PAR',11.99)">1 ud — $7.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Portaplaca Toyota Retro x1',7.99,'Portaplaca Toyota Retro PAR',11.99)">Par — $11.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$7<sup>.99</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-22">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
@@ -1370,7 +1416,10 @@ footer {
         <div class="product-body">
           <div class="product-name">Portaplaca Mitsubishi — Drive Your Ambition</div>
           <p class="product-desc">Marco 3D con logos Mitsubishi en rojo. Texto Drive Your Ambition. Negro mate.</p>
-          <div style="font-size:.72rem;color:#E8A020;font-weight:700;margin-bottom:.5rem;">📦 Par: $11.99 USD</div>
+          <div class="qty-selector">
+            <div class="qty-opt selected" data-qty="uno" onclick="selectQty(this,'Portaplaca Mitsubishi x1',7.99,'Portaplaca Mitsubishi PAR',11.99)">1 ud — $7.99</div>
+            <div class="qty-opt" data-qty="par" onclick="selectQty(this,'Portaplaca Mitsubishi x1',7.99,'Portaplaca Mitsubishi PAR',11.99)">Par — $11.99</div>
+          </div>
           <div class="product-price-row"><span class="product-price">$7<sup>.99</sup></span><span class="product-currency">USD</span></div>
           <div class="product-bs" id="bs-23">&#x1F3E6; Consulta precio en Bs — tasa BCV</div>
           <div class="product-actions">
